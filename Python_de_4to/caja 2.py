@@ -13,12 +13,6 @@ def menu():
     Ingrese 1 para hacer un calculo
     Ingrese 2 para salir
     ''')
-def valores():
-    print(f"los valores son: {Altura}")
-    print("altura son: ",listaH)
-    print(f"la lista es: {listaV}")
-    comparate = list(zip(listaV, listaH))
-    print(f"los datos junto a sus respectivas alturas son: {comparate}")
 while True: #Bucle while para que los datos ingresados entren sin error al programa
     try:
         menu()#se llama a menu()
@@ -57,19 +51,10 @@ while True: #Bucle while para que los datos ingresados entren sin error al progr
                             break
                         for i in range(3):  #Esto solo separa codigo
                             print("...")
-                        #El usuario decide si desea llamar a los valores
-                        print("quiere llamar a los valores?, elija 1, o ingrese otro numero para saber el max y h")
-                        valores = int(input("..."))
-                        if valores == 1:    #Si se cumple valor == 1 se van a llamar a los datos    (1)
-                            valores()
-                        else:
-                            print("...")   #Si se ingresa otro numero
-                        for i in range(3):  #Esto solo separa codigo
-                            print("...")
                         print(f"los datos son: [{max_area}] como el maximo volumen y [{Altura}] como la altura de esa caja")#Se imprime la caja
-                        #list()     
-                        #zip()
-                        #index()
+                        #list()     Aprendi
+                        #zip()      Aprendi
+                        #index()    Aprendi
                         break   #Esto vuelve al primer while para llamar al menu y felection
                 else:
                     print(f"cerrando...          [{felection}]")
@@ -78,12 +63,4 @@ while True: #Bucle while para que los datos ingresados entren sin error al progr
     except ValueError:  #exepcion de caracter en datos ingresados
         print("Dato no valiido, reinicio al menu()")
         print("---------------------------")
-
-'''
-print("ingrese que tan tonto es gordi")
-quetantontoesjordan=(int(input()))
-list=[]
-list.append(quetantontoesjordan)
-print("jordan es de tonto: ", quetantontoesjordan)
-'''
 print("fin")
