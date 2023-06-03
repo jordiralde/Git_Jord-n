@@ -1,24 +1,83 @@
-*   {
+*   {       /* Para toda la web */
     font-family: monospace;
 }
 body    {
-    background-image: url(https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/bltf83b9578c2cc8c82/6426d520c43e6b68f5bd82cc/GOAL_-_Blank_WEB_-_Facebook_-_2023-03-31T134149.308.png?auto=webp&format=pjpg&width=640&quality=60);
+    background-color: white;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-size: cover;
+    margin: 0;      /* Esto hace que el background color salga de su box */
+    padding: 0;     /* Esto hace que el background color salga de su box */
 }
 
-caption {
+/*
+# para ID
+. para Clases
+*/
+caption {   /* Columna de tabla */
     background-color: goldenrod;  
 }
-/*
-Desde aca empieza el index
-*/
-.center    {
+.center {
     text-align: center;
 }
 
+                    /* Header */
+header  {
+    position: fixed;    /* fija la posicion de la cabecera */
+    width: 100%;
+    background-color: rgb(112, 240, 240);
+}
+#divcabecera    {
+    position: relative;
+    height: 75px;
+}
+
+.nav    {
+    text-align: center;
+    background-color: gray;
+}
+
+.boton  {
+    width: 100px;
+    height: 30px;
+}
+
 #logo   {
-    width: 130px;
-    height: 130px;
+    position: relative;
+    top: -50px;
+    width: 70px;
+    height: 70px;
+}
+
+#configuracion  {
+    position: relative;
+    left: 1050px;
+    bottom: 50px;
+    width: 70px;
+    height: 70px;
+}
+.bconfiguracion {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    opacity: 0.5;
+
+}
+                    /* main */
+#idea   {
+    width: 50%;
+    height: 50%;
+}
+
+                    /* footer */
+footer  {
+    background-color: rgb(112, 240, 240);
+}
+#logoyoutube    {
+    width: 50px;
+    height: 50px;
+}
+#logogithub {
+    width: 50px;
+    height: 50px;
 }
