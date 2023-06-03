@@ -1,11 +1,24 @@
-body {
-
-background-color: rgb(4, 11, 40);
-
+*   {
+    font-family: monospace;
+}
+body    {
+    background-image: url(https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/bltf83b9578c2cc8c82/6426d520c43e6b68f5bd82cc/GOAL_-_Blank_WEB_-_Facebook_-_2023-03-31T134149.308.png?auto=webp&format=pjpg&width=640&quality=60);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 caption {
+    background-color: goldenrod;  
+}
+/*
+Desde aca empieza el index
+*/
+.center    {
+    text-align: center;
+}
 
-background-color: goldenrod;
-
+#logo   {
+    width: 130px;
+    height: 130px;
 }
