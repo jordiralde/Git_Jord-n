@@ -1,4 +1,4 @@
- // 01_leds2_delay
+ // 01_leds2_for
 
 const int ledPin1 = 9;
 const int ledPin2 = 10;
