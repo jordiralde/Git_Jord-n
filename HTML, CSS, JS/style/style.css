@@ -14,6 +14,7 @@ body    {
 # para ID
 . para Clases
 */
+
 caption {   /* Columna de tabla */
     background-color: goldenrod;  
 }
@@ -21,57 +22,74 @@ caption {   /* Columna de tabla */
     text-align: center;
 }
 
+
                     /* Header */
+
+
 header  {
     position: fixed;    /* fija la posicion de la cabecera */
     width: 100%;
-    background-color: rgb(112, 240, 240);
+    height: 140px;
 }
-#divcabecera    {
-    position: relative;
-    height: 75px;
-}
+    #divcabecera    {
+        background-color: rgb(112, 240, 240);
+        background-size: contain;
+        position: relative;
+        top: -17px;
+        height: 80px;
+    }
+        #logo   {
+            position: relative;
+            top: -45px;
+            left: 5px;
+            width: 70px;
+            height: 70px;
+        }
 
-.nav    {
-    text-align: center;
-    background-color: gray;
-}
+    .nav    {
+        position: relative;
+        bottom: 75px;
+        background-color: rgb(60, 77, 107);
+    }
 
-.boton  {
-    width: 100px;
-    height: 30px;
-}
-
-#logo   {
-    position: relative;
-    top: -50px;
-    width: 70px;
-    height: 70px;
+        .boton  {
+            width: 100px;
+            height: 30px;
+            background-color: rgb(49, 49, 88);
+            color: white;
 }
 
 #configuracion  {
     position: relative;
-    left: 1050px;
+    left: 1200px;
     bottom: 50px;
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
 }
-.bconfiguracion {
-    background-color: transparent;
-    border: none;
-    outline: none;
+    .bconfiguracion {
+        position: relative;
+        bottom: 40px;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        text-align: right;
+}
 
 
-}
                     /* main */
+
+
 #idea   {
     width: 50%;
     height: 50%;
 }
 
+
                     /* footer */
+
+
 footer  {
-    background-color: rgb(112, 240, 240);
+    background-color: rgb(225, 72, 72);
 }
 #logoyoutube    {
     width: 50px;
