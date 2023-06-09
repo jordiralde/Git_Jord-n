@@ -6,10 +6,6 @@ while True:
     try:
         largo = int(input("largo de la caja "))
         ancho = int(input("ancho de la caja "))
-
-        largo2h = largo - 2 * h
-        ancho2h = ancho - 2 * h
-        volumen = largo2h * ancho2h
         while True:
             print(f"calculo numero {i+1} \n")
             h = h+1
