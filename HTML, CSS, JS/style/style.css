@@ -53,8 +53,8 @@ header  {
     }
 
         .boton  {
-            width: 100px;
-            height: 30px;
+            width: 7%;
+            height: 15%;
             background-color: rgb(49, 49, 88);
             color: white;
 }
@@ -67,6 +67,7 @@ header  {
     height: 50px;
 }
     .bconfiguracion {
+      
         position: relative;
         bottom: 40px;
         background-color: transparent;
