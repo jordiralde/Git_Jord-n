@@ -1,11 +1,13 @@
-*   {       /* Para toda la web */
-    font-family: monospace;
-}
+/* no se usa el * para la pagina  */
 body    {
+    font-family: monospace;
     background-color: white;
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     margin: 0;      /* Esto hace que el background color salga de su box */
     padding: 0;     /* Esto hace que el background color salga de su box */
 }
@@ -29,13 +31,12 @@ caption {   /* Columna de tabla */
 header  {
     position: fixed;    /* fija la posicion de la cabecera */
     width: 100%;
-    bottom: 72%;
 }
     #divcabecera    {
         background-color: rgb(112, 240, 240);
         background-size: contain;
         position: relative;
-        top: -17px;
+        top: -20px;
         height: 80px;
     }
         #logo   {
