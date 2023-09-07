@@ -43,7 +43,7 @@ SHOW CREATE TABLE usu;
 	-- Crea la visualizacion de la alter tabla usu, parece
 
 
-SELECT * FROM usu ;
+SELECT * FROM usu;
 	-- Sirve para ver los elementos de la tabla 'usu'
 
 SELECT * FROM usu WHERE id = 3;
