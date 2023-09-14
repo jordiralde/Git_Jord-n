@@ -17,7 +17,16 @@ CREATE TABLE usu(
 );
 */
 
+-- Delete para borrar un registro
+
+--
+
+-- Date = 2023-9-7
+
 /*			INSERT
+Cuando se inserta un valor, se va a revisar los tipos de datos en orden como la lista en otro caso NULL
+Cuando se llama la tabla, se le puede asignar cuales valores van a ser seleccionados
+
 INSERT INTO Usu (usuario, contraseña) VALUES ('Jordan', 'jordanjuega');
 INSERT INTO Usu (usuario, contraseña) VALUES ('Jordyn', 'pepeortiva');
 INSERT INTO Usu (usuario, contraseña) VALUES ('Jordon', 'pepe');
