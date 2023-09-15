@@ -1,5 +1,5 @@
 print("inicio")
-import random;
+import random
 NumeroRandom = random.randint(1,50)
 NumerosProbados = []
 
