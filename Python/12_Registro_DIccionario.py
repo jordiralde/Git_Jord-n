@@ -18,7 +18,9 @@ def registrarse():
             if usuarioNuevo in usuarios:
                 print("Ingrese otro usuario, ya esta ocupado \n")
             else:
+                global contraseña
                 contraseña = input("Ingrese contraseña: ")
+                
 
                 repetirContraseña = input("Confirme su contraseña: ")
                 if contraseña != repetirContraseña:
