@@ -18,13 +18,15 @@ def registrarse():
             if usuarioNuevo in usuarios:
                 print("Ingrese otro usuario, ya esta ocupado \n")
             else:
-                contraseña = input("ingrese contraseña: ")
+                global contraseña
+                contraseña = input("Ingrese contraseña: ")
+                
 
-                repetirContraseña = input("ingrese contraseña devuelta: ")
+                repetirContraseña = input("Confirme su contraseña: ")
                 if contraseña != repetirContraseña:
                     print("No coinciden las contraseñas")
                 else:
-                    print("hola")
+                    print("bienvenido " + usuarioNuevo)
                     usuarios[usuarioNuevo] = contraseña
                     break
                 break
@@ -33,8 +35,12 @@ def registrarse():
 
 def iniciar_sesion():
     usuarioNuevo = input("Ingrese un nombre para iniciar sesion: ")
+    if usuarioNuevo not in usuarios:
+        print("Su usuario no es valido")
+        exit(print("fin"))
     contraseña = input("ingrese contraseña: ")
 
+    
     if usuarioNuevo in usuarios and usuarios[usuarioNuevo] == contraseña:
         print("Entro a la NASA")
     else:
