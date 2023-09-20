@@ -9,7 +9,7 @@ a3= float(input("elija una medida para la base de su tercer rectangulo "))
 b3= float(input("elija una medida para la altura de su tercer rectangulo"))
 r1= a1*b1
 r2= a2*b2
-r3= a3*b3
+r3= a3*b3   #Primeros programas, se puede hacer con un while
 if r1>r2:
     if r1>r3:
         print("Rectangulo 1 es mayor que los demas")

@@ -10,7 +10,7 @@ def menu():
         print(suma())
     elif opcion == 2:
         print(resta())
-    elif opcion == 3:
+    else:
         exit()
 
 def suma():
