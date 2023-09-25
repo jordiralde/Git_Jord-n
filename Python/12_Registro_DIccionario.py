@@ -14,19 +14,19 @@ def menuInicio():
 def registrarse():
     while True:
         try:
-            usuarioNuevo = input("Ingrese un nombre para registrarse: ")
+            usuarioNuevo = input("Ingrese un nombre para registrarse: ")    #elemento que se va a guardar
+
+
             if usuarioNuevo in usuarios:
                 print("Ingrese otro usuario, ya esta ocupado \n")
             else:
-                global contraseña
-                contraseña = input("Ingrese contraseña: ")
-                
+                contraseña = input("ingrese contraseña: ")  #clave de contraseña
 
-                repetirContraseña = input("Confirme su contraseña: ")
+                repetirContraseña = input("ingrese contraseña devuelta: ")
                 if contraseña != repetirContraseña:
                     print("No coinciden las contraseñas")
                 else:
-                    print("bienvenido " + usuarioNuevo)
+                    print("hola")
                     usuarios[usuarioNuevo] = contraseña
                     break
                 break
@@ -35,12 +35,8 @@ def registrarse():
 
 def iniciar_sesion():
     usuarioNuevo = input("Ingrese un nombre para iniciar sesion: ")
-    if usuarioNuevo not in usuarios:
-        print("Su usuario no es valido")
-        exit(print("fin"))
     contraseña = input("ingrese contraseña: ")
 
-    
     if usuarioNuevo in usuarios and usuarios[usuarioNuevo] == contraseña:
         print("Entro a la NASA")
     else:

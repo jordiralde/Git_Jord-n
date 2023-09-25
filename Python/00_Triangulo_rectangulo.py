@@ -1,12 +1,9 @@
-num = 0
-s='abcde'
-t='abcdefhg'
-def FuncionDiferencias(s: str, t: str, num):
-    for i in t:
-        num+=1
-        print(i, (num))
-        print(t, (num))
-        
-        if s.count(i) != t.count(i):
-            return print(f"letra demas= {i}")
-FuncionDiferencias(s, t, num)
+import pandas as pd
+
+# Cargar el conjunto de datos desde un archivo CSV
+#df = pd.read_csv("glosario.csv")
+
+url = 'https://drive.google.com/uc?id=1MqW2EpcIAnmffzu64-bq4kBv-07y9ILT'
+df = pd.read_csv(url)
+
+print (df)
