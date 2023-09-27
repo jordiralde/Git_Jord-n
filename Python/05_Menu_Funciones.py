@@ -44,19 +44,19 @@ while True:
         if feleccion == 0 or feleccion >= 5:
             print("por favor ingrese un numero en el rango que le pedimos")
         
-        if feleccion == 1:
+        elif feleccion == 1:
             print(f"[{feleccion}], Area de Triangulo")
             triangulo()
             
-        if feleccion == 2:
+        elif feleccion == 2:
             print(f"[{feleccion}], Area de Rectangulo")
             rectangulo()
             
-        if feleccion == 3:
+        elif feleccion == 3:
             print(f"[{feleccion}], Area de circulo")
             radio()
 
-        if feleccion == 4:
+        else:
             print(f"[{feleccion}], Saliendo del programa...")
             break
 
