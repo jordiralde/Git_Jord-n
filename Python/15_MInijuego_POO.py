@@ -3,6 +3,9 @@ Actividad de programación orientada a objetos de a dos
 Desarrollar un código que contenga dos clases con sus atributos y métodos. 
 Luego crear las instancias y simular una interacción entre objetos de diferentes clases.
 Pueden ampliar o agregar funcionalidades a dichas clases
+     O
+    /|\
+    / \
 '''
 #1- Responsabilidad única. ...          S
 #2- Abierto/Cerrado                     O
@@ -12,32 +15,36 @@ Pueden ampliar o agregar funcionalidades a dichas clases
 
 print("inicio")
 
+
 class Personaje:
     ''' 
         Esta clase va a ser la maqueta de los personajes, los personajes cuentan con:
         Vida, Armadura y Fuerza
-            Los personajes pueden:
+                                    Los personajes pueden:
         Atacar
         Defender
+        Saludar
+        Comer
     '''
 
     vida = 50   #Vida Default
     
-    def __init__(self, armadura, fuerza) -> None:
+    def __init__(self, armadura, fuerza, nombre) -> None:
         self.armadura = armadura
         self.fuerza = fuerza
+        self.nombre = nombre
         
     def Defender(self):
         self.defensa = self.vida * self.armadura
 
     def Atacar(self):
         self.ataque = self.fuerza * self.velocidad
-    
-    def Saludar(self):
-        return(f"Hola, soy {PersonajeJugador}")
-    
+
     def Comer(self):
         self.vida = 50
+        return print("Se restauro la vida")
+    
+
 #--------------------------------------------------------------------------------------------------------------
 
 class Auto:     #Por convencion la primera letra es en mayuscula
@@ -74,24 +81,22 @@ class Auto:     #Por convencion la primera letra es en mayuscula
             return v
 
 #--------------------------------------------------------------------------------------------------------------
-
-PersonajeJugador = Personaje(50,50)
+PersonajeJugador = Personaje(50, 50, 'Jordan')
 AutoDeJugador = Auto('rojo', 50, 'Auto de Jugador')
 
 def AccionesDeJugador():
     MenuOpciones = ('''
             Acciones Del Jugador
     1-  Auto
-    2-  Saludar
-    3-  Comer
-    4-  Atacar
-    5-  Defenderse
+    2-  Defenderse
+    3-  Atacar
+    4-  Comer  
     ''')
     return print(MenuOpciones)
 
 def AccionesDeJugadorParaAuto():
     MenuAuto = ('''
-        Acciones Para El Auto
+            Acciones Para El Auto
     1-  Subirse
     2-  Bajar
     3-  Acelerar
@@ -100,6 +105,9 @@ def AccionesDeJugadorParaAuto():
     ''')
     return print(MenuAuto)
 
+#--------------------------------------------------------------------------------------------------------------
+
+
 while True:
     for i in range(5):
         AccionesDeJugador()
@@ -107,6 +115,8 @@ while True:
         if Eleccion == 1:
             AccionesDeJugadorParaAuto()
             Eleccion = int(input("Ingrese su eleccion para el auto "))
+        elif Eleccion == 2:
+            print(PersonajeJugador.nombre)
 
     break
 
