@@ -37,10 +37,10 @@ ALTER TABLE Usu MODIFY COLUMN id INT AUTO_INCREMENT;
  	Esto va a cambiar una columna (id) para que sea autoincrementado
 */
 	-- # Table	Create Table
-CREATE TABLE `usu` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `usuario` varchar(255) NOT NULL,
-  `contraseña` varchar(255) NOT NULL,
+CREATE TABLE usu (
+  id int NOT NULL AUTO_INCREMENT,
+  usuario varchar(255) NOT NULL,
+  contraseña varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 );
 INSERT INTO usu (usuario, contraseña) VALUES ('Jordan', 'jordanjuega');
