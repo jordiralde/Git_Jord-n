@@ -40,7 +40,7 @@ class Personaje:
 
     def Atacar(self):
         self.ataque = self.fuerza * self.velocidad
-        return(print("el ataque inflingio: ", self.ataque))
+        return print("el ataque inflingido es: ",self.ataque)
 
     def Comer(self):
         self.vida = 50
@@ -52,17 +52,14 @@ class Auto:     #Por convencion la primera letra es en mayuscula
     ''' Documentacion de la funcion de la clase '''
 
     vida = 500
+    velocidad = 0
     ruedas = 4
     color = 'rojo'
-    velocidad = 0
     
     def __init__(self, color, aceleracion, nombre) -> None:
         self.color = color
         self.nombre = nombre
         self.aceleracion = aceleracion
-    
-    def PuntosDeVida(self):
-        self.vida = self.vida - Personaje.Atacar()
 
     def Subirse(self):
         return print("---------------Estas en el auto---------------")
@@ -72,7 +69,7 @@ class Auto:     #Por convencion la primera letra es en mayuscula
         
     def Acelerar(self):
         self.velocidad = self.velocidad + self.aceleracion
-        return print("El auto acelero, la velocidad es", self.velocidad)
+        return print("El auto acelero, la velocidad es: ", self.velocidad)
 
     def Frenar(self):
         v = self.velocidad 
@@ -118,32 +115,37 @@ def AccionesDeJugadorParaAuto():
                     AutoDeJugador.Subirse()
                     print("la velocidad es: ", AutoDeJugador.velocidad)
                     print(MenuEnAuto)
+
                     EleccionEnAuto = int(input("Ingrese acciones en el auto: "))
 
                     if EleccionEnAuto == 1 and AutoDeJugador.velocidad == 0:
                         AutoDeJugador.Bajarse()
                         break
+
                     elif EleccionEnAuto == 1 and AutoDeJugador.velocidad > 0:
                         print("no puede bajarse, reduzca la velocidad a 0")
+                        
                     elif EleccionEnAuto == 2:
                         AutoDeJugador.Acelerar()
                     elif EleccionEnAuto == 3:
                         AutoDeJugador.Frenar()
                     else:
                         print("No hizo nada")
+
+
             elif Eleccion == 2:
                 print("No esta pasando nada")
                 break
 
             elif Eleccion == 3:
                 PersonajeJugador.Atacar()
-                print(f"Golpeaste al [{AutoDeJugador.nombre}], la vida del [{AutoDeJugador.nombre}] es: ", AutoDeJugador.vida - PersonajeJugador.fuerza)
+                print(f"Golpeaste al [{AutoDeJugador.nombre}], la vida del [{AutoDeJugador.nombre}] es: ", Auto.vida - Personaje)
                 print("Otro golpe?")
 
                 while True:
                     SistemaDeAtaque = int(input("1 para atacar, otro para hacer nada: "))
                     if SistemaDeAtaque == 1:
-                        print(f"Otro golpe, la vida del [{AutoDeJugador.nombre}] es: ", Auto.PuntosDeVida)
+                        print(f"Otro golpe, la vida del [{AutoDeJugador.nombre}] es: ", AutoDeJugador.vida)
                     else:
                         print("No hizo nada")
                         break
@@ -155,6 +157,10 @@ def AccionesDeJugadorParaAuto():
             print("dato no valido")
 
 
+#Sistema de ataque funciona asi
+
+
+#Personaje.vida - PersonajeJugador.atacar
 
 #--------------------------------------------------------------------------------------------------------------
 while True:
