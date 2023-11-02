@@ -3,18 +3,16 @@ Actividad de programación orientada a objetos de a dos
 Desarrollar un código que contenga dos clases con sus atributos y métodos. 
 Luego crear las instancias y simular una interacción entre objetos de diferentes clases.
 Pueden ampliar o agregar funcionalidades a dichas clases
- O
-/|\
-/ \
 '''
-#1- Responsabilidad única. ...          S
+#1- Responsabilidad única.              S
 #2- Abierto/Cerrado                     O
-#3- Sustitución de Liskov. ...          L
-#4- Segregación de interfaz. ...        I
+#3- Sustitución de Liskov.              L
+#4- Segregación de interfaz.            I
 #5-  Inversión de dependencia.          D
 
 print("inicio")
-#---------------------------------------------------CLASES------------------------------------------------------
+
+#---------------------------------------------------PERSONAJES------------------------------------------------------
 class Personaje:
     ''' 
         Esta clase va a ser la maqueta de los personajes, los personajes cuentan con:
@@ -25,28 +23,35 @@ class Personaje:
         Comer
     '''
 
-    vida = 50   #Vida Default
+    vida = 100   #Vida Default
     velocidad = 5
     
-    def __init__(self, armadura, fuerza, nombre) -> None:
+    def __init__(self, armadura, nombre) -> None:
         self.armadura = armadura
-        self.fuerza = fuerza
+        self.fuerza = 20
         self.nombre = nombre
         
     def Defender(self):
-        
-        Pdef = self.defensa = self.vida * self.armadura
-        return print(Pdef)
+        self.defensa = self.vida + self.armadura
+        return print("Los puntos de defensa son: ", self.defensa)
 
     def Atacar(self):
         self.ataque = self.fuerza * self.velocidad
-        return(print("el ataque inflingio: ", self.ataque))
+        self.vida = (self.armadura + self.vida) / self.ataque
+        #self.vida = self.Defender / self.ataque            NO SE PUEDEN HACER CALCULOS ENTRE METODOS Y NUMEROS 
+        return print(f"Inflingio un daño de: {self.ataque}, la vida se redujo a {self.vida}")
 
     def Comer(self):
-        self.vida = 50
-        return print("Se restauro la vida")
+        self.vida = 100
+        return print("Se restauro la vida , vida es: ", self.vida)
     
-#---------------------------------------------------------------------------------------------------------------
+PersonajeJugador = Personaje(50, 'Jordan')    
+
+
+
+#---------------------------------------------------------Auto---------------------------------------------------------
+
+
 
 class Auto:     #Por convencion la primera letra es en mayuscula
     ''' Documentacion de la funcion de la clase '''
@@ -82,8 +87,12 @@ class Auto:     #Por convencion la primera letra es en mayuscula
         self.velocidad = v
         return print("freno, la velocidad es ",v)
 
+
+
 #--------------------------------------------------FUNCIONES----------------------------------------------------
-PersonajeJugador = Personaje(50, 50, 'Jordan')
+
+
+
 AutoDeJugador = Auto('rojo', 50, 'Auto del Jugador')
 
 def AccionesDeJugador():
@@ -113,29 +122,34 @@ def AccionesDeJugadorParaAuto():
             print(MenuAuto)
             Eleccion = int(input("Ingrese acciones en el auto: "))
 
-            if Eleccion == 1:
+            if Eleccion == 1:           #1 Si se sube
                 while True:
                     AutoDeJugador.Subirse()
                     print("la velocidad es: ", AutoDeJugador.velocidad)
                     print(MenuEnAuto)
                     EleccionEnAuto = int(input("Ingrese acciones en el auto: "))
 
-                    if EleccionEnAuto == 1 and AutoDeJugador.velocidad == 0:
+                    if EleccionEnAuto == 1 and AutoDeJugador.velocidad == 0:        #Si la velocidad es cero, se baja
                         AutoDeJugador.Bajarse()
                         break
-                    elif EleccionEnAuto == 1 and AutoDeJugador.velocidad > 0:
+
+                    elif EleccionEnAuto == 1 and AutoDeJugador.velocidad > 0:       #Si la velocidad no es cero
                         print("no puede bajarse, reduzca la velocidad a 0")
-                    elif EleccionEnAuto == 2:
+
+                    elif EleccionEnAuto == 2:                                       #Acelerar
                         AutoDeJugador.Acelerar()
-                    elif EleccionEnAuto == 3:
+
+                    elif EleccionEnAuto == 3:                                       #Frenars
                         AutoDeJugador.Frenar()
+
                     else:
                         print("No hizo nada")
-            elif Eleccion == 2:
+            elif Eleccion == 2:         #Si no se sube, no hace nada y vuelve al menu
                 print("No esta pasando nada")
                 break
 
-            elif Eleccion == 3:
+            elif Eleccion == 3:         #3 Le esta pegando al auto
+                print(PersonajeJugador.fuerza)
                 PersonajeJugador.Atacar()
                 print(f"Golpeaste al [{AutoDeJugador.nombre}], la vida del [{AutoDeJugador.nombre}] es: ", AutoDeJugador.vida - PersonajeJugador.fuerza)
                 print("Otro golpe?")
@@ -162,15 +176,18 @@ while True:
     Eleccion = int(input("Eleccion "))
     if Eleccion == 1:
         AccionesDeJugadorParaAuto()
+
     elif Eleccion == 2:
-        PersonajeJugador.Defender
+        PersonajeJugador.Defender()
         print("te defendiste de algo")
+
     elif Eleccion == 3:
         PersonajeJugador.Atacar
         print("Atacaste")
+
     elif Eleccion == 4:
         PersonajeJugador.Comer
-        print("Comiste")
+
     else:
         break
 
