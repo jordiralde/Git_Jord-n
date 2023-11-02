@@ -130,7 +130,7 @@ def AccionesDeJugadorParaAuto():
                     EleccionEnAuto = int(input("Ingrese acciones en el auto: "))
 
                     if EleccionEnAuto == 1 and AutoDeJugador.velocidad == 0:        #Si la velocidad es cero, se baja
-                        AutoDeJugador.Bajarse()
+                        AutoDeJugador.Bajarse()     #6 GRADOS DE IDENTACION, MALA PRACTICA
                         break
 
                     elif EleccionEnAuto == 1 and AutoDeJugador.velocidad > 0:       #Si la velocidad no es cero
