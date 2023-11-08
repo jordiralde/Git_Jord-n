@@ -11,7 +11,7 @@ Pueden ampliar o agregar funcionalidades a dichas clases
 5-  Inversión de dependencia.          D
 
 DRY
-
+NO se pueden calculos entre datos y metodos
 KISS
 '''
 print("inicio")
@@ -38,13 +38,11 @@ class Personaje:
     def Defender(self):
         self.defensa = self.vida + self.armadura
         return print("Los puntos de defensa son: ", self.defensa)
-
-    def Atacar(self):
-        self.ataque = self.fuerza * self.velocidad
-        self.vida = (self.armadura + self.vida) / self.ataque
-        
-        #self.vida = self.Defender / self.ataque            NO SE PUEDEN HACER CALCULOS ENTRE METODOS Y NUMEROS 
-        return print(f"Inflingio un daño de: {self.ataque}, la vida se redujo a {self.vida}")
+    
+    def PuntosAtaque(self, fuerza):
+        Daño = self.fuerza * self.velocidad
+        print(Daño)
+        return Daño
 
     def Comer(self):
         self.vida = 100
@@ -70,9 +68,6 @@ class Auto:     #Por convencion la primera letra es en mayuscula
         self.color = color
         self.nombre = nombre
         self.aceleracion = aceleracion
-    
-    def PuntosDeVida(self):
-        self.vida = self.vida - Personaje.Atacar()
 
     def Subirse(self):
         return print("---------------Estas en el auto---------------")
@@ -92,10 +87,7 @@ class Auto:     #Por convencion la primera letra es en mayuscula
         self.velocidad = v
         return print("freno, la velocidad es ",v)
 
-
-
 #--------------------------------------------------FUNCIONES----------------------------------------------------
-
 
 
 AutoDeJugador = Auto('rojo', 50, 'Auto del Jugador')
@@ -109,12 +101,6 @@ def AccionesDeJugador():
     4-  Comer
     ''')
     return print(MenuOpciones)
-
-def SistemaDeAtaque():
-    AutoDeJugador.vida - PersonajeJugador.Atacar()
-    if AutoDeJugador.vida == 0:
-        AutoDeJugador.vida == 0
-        print(Auto.vida)
 
 def AccionesDeJugadorParaAuto():
     MenuAuto = ('''
@@ -175,11 +161,11 @@ while True:
         print("te defendiste de algo")
 
     elif Eleccion == 3:
-        PersonajeJugador.Atacar
+        SistemaDeAtaque()
         print("Atacaste")
 
     elif Eleccion == 4:
-        PersonajeJugador.Comer
+        PersonajeJugador.Comer()
 
     else:
         break
