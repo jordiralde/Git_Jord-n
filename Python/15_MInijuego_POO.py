@@ -110,6 +110,12 @@ def AccionesDeJugador():
     ''')
     return print(MenuOpciones)
 
+def SistemaDeAtaque():
+    AutoDeJugador.vida - PersonajeJugador.Atacar()
+    if AutoDeJugador.vida == 0:
+        AutoDeJugador.vida == 0
+        print(Auto.vida)
+
 def AccionesDeJugadorParaAuto():
     MenuAuto = ('''
             Acciones Para El Auto
@@ -126,50 +132,32 @@ def AccionesDeJugadorParaAuto():
         try:
             print(MenuAuto)
             Eleccion = int(input("Ingrese acciones en el auto: "))
-
             if Eleccion == 1:           #1 Si se sube
-                while True:
-                    AutoDeJugador.Subirse()
-                    print("la velocidad es: ", AutoDeJugador.velocidad)
-                    print(MenuEnAuto)
-                    EleccionEnAuto = int(input("Ingrese acciones en el auto: "))
+                AutoDeJugador.Subirse()
+                print("la velocidad es: ", AutoDeJugador.velocidad)
+                print(MenuEnAuto)
+                EleccionEnAuto = int(input("Ingrese acciones en el auto: "))
 
-                    if EleccionEnAuto == 1 and AutoDeJugador.velocidad == 0:        #Si la velocidad es cero, se baja
-                        AutoDeJugador.Bajarse()     #6 GRADOS DE IDENTACION, MALA PRACTICA
-                        break
+                if EleccionEnAuto == 1 and AutoDeJugador.velocidad == 0:        #Si la velocidad es cero, se baja
+                    AutoDeJugador.Bajarse()     #6 GRADOS DE IDENTACION, MALA PRACTICA
+                    break
 
-                    elif EleccionEnAuto == 1 and AutoDeJugador.velocidad > 0:       #Si la velocidad no es cero
-                        print("no puede bajarse, reduzca la velocidad a 0")
+                elif EleccionEnAuto == 2:                                       #Acelerar
+                    AutoDeJugador.Acelerar()
 
-                    elif EleccionEnAuto == 2:                                       #Acelerar
-                        AutoDeJugador.Acelerar()
+                elif EleccionEnAuto == 3:                                       #Frenars
+                    AutoDeJugador.Frenar()
 
-                    elif EleccionEnAuto == 3:                                       #Frenars
-                        AutoDeJugador.Frenar()
-
-                    else:
-                        print("No hizo nada")
+                else:
+                    print("No hizo nada")
             elif Eleccion == 2:         #Si no se sube, no hace nada y vuelve al menu
                 print("No esta pasando nada")
                 break
 
             elif Eleccion == 3:         #3 Le esta pegando al auto
-                print(PersonajeJugador.fuerza)
-                PersonajeJugador.Atacar()
-                print(f"Golpeaste al [{AutoDeJugador.nombre}], la vida del [{AutoDeJugador.nombre}] es: ", AutoDeJugador.vida - PersonajeJugador.fuerza)
-                print("Otro golpe?")
-
-                while True:
-                    SistemaDeAtaque = int(input("1 para atacar, otro para hacer nada: "))
-                    if SistemaDeAtaque == 1:
-                        print(f"Otro golpe, la vida del [{AutoDeJugador.nombre}] es: ", Auto.PuntosDeVida)
-                    else:
-                        print("No hizo nada")
-                        break
-
+                SistemaDeAtaque()
             else:
-                print(MenuAuto)
-                print("Elija una de las opciones")
+                print(f"{MenuAuto},Elija una de las opciones")
         except ValueError:
             print("dato no valido")
 
