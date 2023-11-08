@@ -3,13 +3,17 @@ Actividad de programación orientada a objetos de a dos
 Desarrollar un código que contenga dos clases con sus atributos y métodos. 
 Luego crear las instancias y simular una interacción entre objetos de diferentes clases.
 Pueden ampliar o agregar funcionalidades a dichas clases
-'''
-#1- Responsabilidad única.              S
-#2- Abierto/Cerrado                     O
-#3- Sustitución de Liskov.              L
-#4- Segregación de interfaz.            I
-#5-  Inversión de dependencia.          D
 
+1- Responsabilidad única.              S
+2- Abierto/Cerrado                     O
+3- Sustitución de Liskov.              L
+4- Segregación de interfaz.            I
+5-  Inversión de dependencia.          D
+
+DRY
+
+KISS
+'''
 print("inicio")
 
 #---------------------------------------------------PERSONAJES------------------------------------------------------
@@ -38,6 +42,7 @@ class Personaje:
     def Atacar(self):
         self.ataque = self.fuerza * self.velocidad
         self.vida = (self.armadura + self.vida) / self.ataque
+        
         #self.vida = self.Defender / self.ataque            NO SE PUEDEN HACER CALCULOS ENTRE METODOS Y NUMEROS 
         return print(f"Inflingio un daño de: {self.ataque}, la vida se redujo a {self.vida}")
 
