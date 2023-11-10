@@ -14,7 +14,7 @@ class rectangulo():
         self.perimetro = (self.longitud * 2) + (self.ancho * 2)
         return print(f"El perimetro del rectangulo es {self.perimetro}")
     
-MiRectangulo = rectangulo(5, 4)
+MiRectangulo = rectangulo(3, 4)
 
 MiRectangulo.calculo_area() 
 MiRectangulo.calculo_perimetro()
