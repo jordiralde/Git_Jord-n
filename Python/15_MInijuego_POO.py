@@ -4,6 +4,8 @@ Desarrollar un código que contenga dos clases con sus atributos y métodos.
 Luego crear las instancias y simular una interacción entre objetos de diferentes clases.
 Pueden ampliar o agregar funcionalidades a dichas clases
 
+NO se pueden calculos entre datos y metodos
+
 1- Responsabilidad única.              S
 2- Abierto/Cerrado                     O
 3- Sustitución de Liskov.              L
@@ -11,7 +13,8 @@ Pueden ampliar o agregar funcionalidades a dichas clases
 5-  Inversión de dependencia.          D
 
 DRY
-NO se pueden calculos entre datos y metodos
+WET
+YAGNI
 KISS
 '''
 print("inicio")
@@ -29,10 +32,10 @@ class Personaje:
 
     vida = 100   #Vida Default
     velocidad = 5
+    fuerza = 20
     
     def __init__(self, armadura, nombre) -> None:
         self.armadura = armadura
-        self.fuerza = 20
         self.nombre = nombre
         
     def Defender(self):

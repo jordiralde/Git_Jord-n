@@ -1,6 +1,6 @@
 class rectangulo():
     
-    #Esta clase realizara el calculo del area o del perimetro de un rectangulo
+    #Esta clase realizara el calculo del area y del perimetro de un rectangulo
 
     def __init__(self, longitud, ancho) -> None:
         self.longitud = longitud
