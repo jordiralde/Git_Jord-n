@@ -1,0 +1,57 @@
+*   {
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+}
+
+header  {
+    font-size: 150%;
+    text-align: center;
+    height: 15%;
+    width: 100%;
+    background-color: aqua;
+    position: fixed;
+}
+
+nav     {
+    background-color: blue;
+    border-style: solid;
+    border-color: black;
+    border-left: 3px;
+    border-right: 3px;
+}
+
+.boton  {
+    margin-right: 50px;
+    background-color: black;
+    color: white;
+}
+
+main    {
+    background-color: aquamarine;
+    margin: 5pxs;
+    font-size: 105%;
+}
+
+th, td   {
+    border: 2px solid black;
+
+}
+/*
+        Debe crear en HTML la estructura completa estableciendo sus secciones y jerarquias de un Sitio Web para un
+        cliente que requiere un sitio Web, constituido por tres paginas web, luego debera darle el estilo.
+        
+        La pagina web de Inicio debe contener la informacion general y especifica de la empresa
+        (Nombre, descripcion, imagenes ubicacion, etc.)
+
+        La siguiente Pagina Web debe contener una tabla con tres columnas, encabezdo y dos filas. 
+        Y el acceso a las redes sociales de la empresa.
+
+        La tercera pagina web debe contener un titulo, una descripcion y un formulario de consulta con cuatro campos
+        (Apellidos, Nombres, Email y comentario donde realiza la consulta), cada campo con los atributos necesarios y un
+        boton de enviar o entregar (submit).
+
+        Las paginas tienen que estar vinculadas entre si de forma que la o el usuario pueda navegar entre las paginas web
+        En alguna de ellas es necesario usar un identificador en el elemento que crea mas conveniente y en todas debe estar
+        el acceso a las redes sociales de la empresa
+*/ 
