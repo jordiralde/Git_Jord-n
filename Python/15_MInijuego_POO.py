@@ -14,7 +14,7 @@ NO se pueden calculos entre datos y metodos
 
 DRY
 WET
-YAGNI
+YAGNI (You aren't gonna need it)
 KISS
 '''
 print("inicio")
