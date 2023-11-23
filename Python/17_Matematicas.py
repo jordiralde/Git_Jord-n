@@ -12,15 +12,19 @@ def MenuCalculos():
 
     return print(Menu)
 
-def Calculo_Perimetro(a, b):
+def Calculo_Perimetro():
     x = int(input("Ingrese el numero de lados que contiene: "))
     lados = int(input("Ingrese los cm los lados contienen: "))
 
-    perimetro = lados * x
+    if lados < 3:
+        print("El calculo no es posible")
+    else:
+        perimetro = lados * x   #De un poligono regular
     return print("El perimetro es: ", perimetro)
 
 def Calculo_Area(a, b):
-    Area = a * b
+    apotema = a
+    Area = Calculo_Perimetro * apotema / 2
     return print("El area es: ",Area)
 
 
@@ -36,7 +40,7 @@ while True:
         Eleccion = int(input("Ingrese su eleccion: "))
         if Eleccion == 1:
             Calculo_Perimetro()
-            
+
         elif Eleccion == 2:
             Calculo_Area()
     except ValueError():
