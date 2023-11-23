@@ -6,4 +6,5 @@ def CalculoPerimetro(a, b):
 
 
 def CalculoArea(a, b):
-    
+    Area = 
+    return Area
