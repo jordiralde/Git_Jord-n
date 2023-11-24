@@ -5,38 +5,71 @@
 }
 
 header  {
+    position: relative;
     font-size: 150%;
-    text-align: center;
     height: 15%;
     width: 100%;
     background-color: aqua;
     position: fixed;
 }
+h1      {
+    font-size: 150%;
+    text-align: center;
+}
 
 nav     {
+    height: 75%;
     background-color: blue;
-    border-style: solid;
-    border-color: black;
-    border-left: 3px;
-    border-right: 3px;
 }
 
 .boton  {
-    margin-right: 50px;
-    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
     color: white;
+}
+button  {
+    padding: 10px 20px;
 }
 
 main    {
+    padding-top: 130px;
     background-color: aquamarine;
-    margin: 5pxs;
-    font-size: 105%;
+}
+p       {
+    font-size:larger;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
-th, td   {
+table, td, th   {
     border: 2px solid black;
-
+    border-collapse: collapse;
 }
+
+a       {
+    text-decoration: none;
+}
+
+form    {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea elementos horizontalmente */
+}
+
+footer  {
+    border-top: 3px solid black;
+    background-color: rgb(117, 108, 108);
+}
+
+.ImgFooter {
+    margin-left: 20px;
+    margin-right: 40%;
+}
+
+
+
+
 /*
         Debe crear en HTML la estructura completa estableciendo sus secciones y jerarquias de un Sitio Web para un
         cliente que requiere un sitio Web, constituido por tres paginas web, luego debera darle el estilo.
