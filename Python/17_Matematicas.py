@@ -13,13 +13,14 @@ def MenuCalculos():
     return print(Menu)
 
 def Calculo_Perimetro():
-    x = int(input("Ingrese el numero de lados que contiene: "))
+    CantidadLados = int(input("Ingrese el numero de lados que contiene: "))
     lados = int(input("Ingrese los cm los lados contienen: "))
-
-    if lados < 3:
-        print("El calculo no es posible")
-    else:
-        perimetro = lados * x   #De un poligono regular
+    while lados < 3:
+        try:
+            lados = int(input("Ingrese el numero de lados que contiene: "))
+        except ValueError():
+            print("Error")
+    perimetro = lados * x   #De un poligono regular
     return print("El perimetro es: ", perimetro)
 
 def Calculo_Area(a, b):
