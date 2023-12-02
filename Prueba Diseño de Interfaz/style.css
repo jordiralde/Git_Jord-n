@@ -9,13 +9,12 @@ Esto es un comentario en CSS
 header  {
     position: relative;
     font-size: 150%;
-    height: 15%;
     width: 100%;
     background-color: rgb(155, 193, 193);
     position: fixed;
 }
 h1      {
-    font-size: 150%;
+    padding-top: 5%;
     text-align: center;
 }
 

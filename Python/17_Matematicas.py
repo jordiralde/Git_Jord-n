@@ -3,14 +3,16 @@ import math
 print("Programa de Matematicas")
 
 def MenuCalculos():
-    Menu = '''
-    1-  Calculo de Perimetro
-    2-  Calculo de Area
-    3-  Calculo Suma-Resta de Monomios
-    4-  Calculo Multiplicacion-Division de Monomios
+    Menu1 = '''
+    1- Calculo con Figuras
+    2- Calculo con Numeros y Operaciones
+    3-  Calculo de Perimetro
+    4-  Calculo de Area
+    5-  Calculo Suma-Resta de Monomios
+    6-  Calculo Multiplicacion-Division de Monomios
     '''
 
-    return print(Menu)
+    return print(Menu1)
 
 def Calculo_Perimetro():
     CantidadLados = int(input("Ingrese el numero de lados que contiene: "))
