@@ -37,6 +37,10 @@ def Suma_Resta_Monomios():
 def Multi_Divis_Monomios():
     print("Cuanto es 4a^2 * 2a^2?")
 
+def Exponencial():
+    x = int(input("Ingrese "))
+    NumeroExponencial = x * (x-1)
+
 while True:
     try:
         MenuCalculos()
