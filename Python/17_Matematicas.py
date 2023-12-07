@@ -1,5 +1,9 @@
 import math
+def main():
+    print("main")
 
+if __name__ == "__main__":
+    main()
 print("Programa de Matematicas")
 
 def MenuCalculos():
@@ -17,12 +21,10 @@ def MenuCalculos():
 def Calculo_Perimetro():
     CantidadLados = int(input("Ingrese el numero de lados que contiene: "))
     lados = int(input("Ingrese los cm los lados contienen: "))
-    while lados < 3:
-        try:
-            lados = int(input("Ingrese el numero de lados que contiene: "))
-        except ValueError():
-            print("Error")
-    perimetro = lados * x   #De un poligono regular
+    if lados < 3:
+        print("Circulo")
+    else:
+        perimetro = lados * x   #De un poligono regular
     return print("El perimetro es: ", perimetro)
 
 def Calculo_Area(a, b):
@@ -40,6 +42,7 @@ def Multi_Divis_Monomios():
 def Exponencial():
     x = int(input("Ingrese "))
     NumeroExponencial = x * (x-1)
+    return NumeroExponencial
 
 while True:
     try:
@@ -50,5 +53,8 @@ while True:
 
         elif Eleccion == 2:
             Calculo_Area()
+        
+        else:
+            Exponencial()
     except ValueError():
         print("Error, dato no valido")
