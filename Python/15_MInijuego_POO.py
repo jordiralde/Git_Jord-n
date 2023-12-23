@@ -42,7 +42,7 @@ class Personaje:
         self.defensa = self.vida + self.armadura
         return print("Los puntos de defensa son: ", self.defensa)
     
-    def PuntosAtaque(self, fuerza):
+    def PuntosAtaque(self):
         Daño = self.fuerza * self.velocidad
         print(Daño)
         return Daño
