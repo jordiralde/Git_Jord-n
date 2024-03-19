@@ -33,16 +33,18 @@ class Personaje:
     vida = 100   #Vida Default
     velocidad = 5
     fuerza = 20
+
     
-    def __init__(self, armadura, nombre) -> None:
+    def __init__(self, armadura, nombre, encapsuladoPoder) -> None:
         self.armadura = armadura
         self.nombre = nombre
+        self.__encapsuladoPoder = encapsuladoPoder      #Esto hace que sea encapsulado
         
     def Defender(self):
         self.defensa = self.vida + self.armadura
         return print("Los puntos de defensa son: ", self.defensa)
     
-    def PuntosAtaque(self, fuerza):
+    def PuntosAtaque(self):
         Daño = self.fuerza * self.velocidad
         print(Daño)
         return Daño
@@ -51,15 +53,15 @@ class Personaje:
         self.vida = 100
         return print("Se restauro la vida , vida es: ", self.vida)
     
-PersonajeJugador = Personaje(50, 'Jordan')    
+PersonajeJugador = Personaje(50, 'Jordan', 50)    
 
-
-
+PersonajeJugador.__encapsuladoPoder()
+print(PersonajeJugador.__encapsuladoPoder)
 #---------------------------------------------------------Auto---------------------------------------------------------
 
 
 
-class Auto:     #Por convencion la primera letra es en mayuscula
+class Auto():     #Por convencion la primera letra es en mayuscula
     ''' Documentacion de la funcion de la clase '''
 
     vida = 500
