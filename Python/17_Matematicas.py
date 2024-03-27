@@ -1,9 +1,5 @@
 import math
-def main():
-    print("main")
 
-if __name__ == "__main__":
-    main()
 print("Programa de Matematicas")
 
 def MenuCalculos():
@@ -19,12 +15,18 @@ def MenuCalculos():
     return print(Menu1)
 
 def Calculo_Perimetro():
-    CantidadLados = int(input("Ingrese el numero de lados que contiene: "))
-    lados = int(input("Ingrese los cm los lados contienen: "))
-    if lados < 3:
-        print("Circulo")
-    else:
-        perimetro = lados * x   #De un poligono regular
+    while True :
+        try:
+            CantidadLados = int(input("Ingrese el numero de lados que contiene: "))
+            if CantidadLados < 3:
+                print("No se puede")
+                break
+            CmDeLados = int(input("Ingrese los cm los lados contienen: "))
+            perimetro = CmDeLados * CantidadLados   #De un poligono regular
+
+            break
+        except ValueError():
+            print("Error")
     return print("El perimetro es: ", perimetro)
 
 def Calculo_Area(a, b):
@@ -39,22 +41,20 @@ def Suma_Resta_Monomios():
 def Multi_Divis_Monomios():
     print("Cuanto es 4a^2 * 2a^2?")
 
-def Exponencial():
-    x = int(input("Ingrese "))
-    NumeroExponencial = x * (x-1)
-    return NumeroExponencial
-
 while True:
+    MenuCalculos()
     try:
-        MenuCalculos()
         Eleccion = int(input("Ingrese su eleccion: "))
         if Eleccion == 1:
-            Calculo_Perimetro()
+            #Calculo_Figuras()
+            print()
 
         elif Eleccion == 2:
-            Calculo_Area()
-        
-        else:
-            Exponencial()
+            #Calculo_NumeroOperaciones()
+            print()
+            
+        elif Eleccion == 3:
+            Calculo_Perimetro()
+
     except ValueError():
         print("Error, dato no valido")
