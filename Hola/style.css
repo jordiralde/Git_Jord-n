@@ -1,0 +1,19 @@
+*   {
+    margin: 0;
+}
+
+main    {
+    background-color: red;
+}
+
+.Linea      {
+    background-color: white;
+}
+
+.Contenedor {
+    position: relative;
+    background-color: rgb(198, 133, 133);
+    justify-content: center;
+    text-align: center;
+
+}
